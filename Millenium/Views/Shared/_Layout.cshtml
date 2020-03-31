@@ -63,7 +63,7 @@
                                     @Html.ActionLink("О компании", "About", "Home")
                                 </li>
                                 <li>
-                                    <a href="" onclick="openPopUp">
+                                    <a href="" class="js-open-menu-other" data-id="4043">
                                         Услуги
                                         <i class="header-menu__chevron"></i>
                                     </a>
@@ -105,8 +105,8 @@
         </div>
     </header>
 </div>
-<div id ="popupDiv" class="header-menu-other__block" style="display: none">
-    <ul class="header-menu-other">
+<div class="header-menu-other__block">
+    <ul class="header-menu-other" style="display: none;" id="menu-4043">
         <li>
             <a href="">
                 <img src="/img/icon-main-5_5b7fde_5b9671.png">
@@ -129,7 +129,7 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="/">
                 <img src="/img/icon-main-4_5b7fde.png">
                 <br>
                 Ремонт фасадов
@@ -144,7 +144,7 @@
         </li>
         <li>
             <a href="">
-                <img src="img/icon-main-2_5b7fde.png">
+                <img src="/img/icon-main-2_5b7fde.png">
                 <br>
                 Благоустройство придомовой территории
             </a>
@@ -192,11 +192,16 @@
 </html>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
+        $('.js-open-menu-other').click(function() {
+            if ($(window).width() > 480) {
+                event.preventDefault();
+                var id = $(this).data('id'); $('#menu-' + id).slideToggle('medium', function() {
+                    if ($(this).is(':visible')) {
+                        $(this).css('display', 'flex');
+                    }
+                });
+            }
+        });
     });
-
-
-    function openPopUp() {
-        $("#popupDiv").attr("visibility", "visible");
-    }
 </script>
