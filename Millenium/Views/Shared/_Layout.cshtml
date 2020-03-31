@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+
+<link href="/css/styles.css" rel="stylesheet" />
+<link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="lib/jquery/jquery.js"></script>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="header-block__top--flex">
+            <meta itemprop="name" content="ООО Красивый Петербург">
+            <div class="header-block__top-time">
+                <text>пн-пт с 9:30 до 19:00</text>
+            </div>
+            <div class="header-block__top-address">
+                <text>Санкт-Петербург, улица Шпалерная, дом.26, лит.А</text>
+            </div>
+            <div>
+                <span class="header-block__top-phone--span">
+                    <text class="header-block__top-phone">+7 (812) 642-16-35</text><br>
+                </span>
+                <text class="header-block__top-phone">+7 (812) 924-16-35</text>
+                <text class="header-block__top-email">6421635@rsk-piter.ru</text>
+                <text class="button header-block__top-feedback header-feedback">Оставить заявку</text>
+                <text class="header-block__top-menu">Меню</text>
+            </div>
+        </div>
+        <div class="header-block__bottom">
+            <a href="/" class="header-logo"></a>
+            <div class="header-block">
+                <div class="header-block__info">
+                    <div class="info_item">
+                        <div class="img"><img src="/img/i_1.png"></div>
+                        <div class="info_data">
+                            <div>бесплатный</div>
+                            <div>выезд мастера</div>
+                        </div>
+                    </div>
+                    <div class="info_item">
+                        <div class="img"><img src="/img/i_2.png"></div>
+                        <div class="info_data">
+                            <div>бесплатная</div>
+                            <div>смета на следующий день</div>
+                        </div>
+                    </div>
+                    <div class="info_item">
+                        <div class="img"><img src="/img/i_3.png"></div>
+                        <div class="info_data">
+                            <div>бесплатная</div>
+                            <div>рассрочка</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-block__menu">
+                    <div class="header-block__menu--flex">
+                        <div>
+                            <ul class="header-menu" id="header-menu">
+                                <li>
+                                    @Html.ActionLink("О компании", "About", "Home")
+                                </li>
+                                <li>
+                                    <a href="" onclick="openPopUp">
+                                        Услуги
+                                        <i class="header-menu__chevron"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Наши работы
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Цены
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Отзывы
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Контакты
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Вакансии
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div>
+                            <span class="button header-feedback" onclick="">Оставить заявку</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+<div id ="popupDiv" class="header-menu-other__block" style="display: none">
+    <ul class="header-menu-other">
+        <li>
+            <a href="">
+                <img src="/img/icon-main-5_5b7fde_5b9671.png">
+                <br>
+                Косметический ремонт парадных
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="/img/icon-main-6_5b7fde.png">
+                <br>
+                Замена окон и дверей
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="/img/icon-main-7_5b7fde.png">
+                <br>
+                Асфальтирование
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="/img/icon-main-4_5b7fde.png">
+                <br>
+                Ремонт фасадов
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="/img/icon-main-1_5b7fde.png">
+                <br>
+                Кровельные работы
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="img/icon-main-2_5b7fde.png">
+                <br>
+                Благоустройство придомовой территории
+            </a>
+        </li>
+    </ul>
+
+</div>
+<div>
+    @RenderBody()
+</div>
+<footer>
+    <div class="wrapper">
+        <div class="footer">
+            <div class="footer-child__logo"><a href="/"><img src="/img/logo.png"></a></div>
+            <div class="footer-child__copyright">
+                <p>© 2013-2020</p>
+                <p>Ремонтно-строительная компания<br>ООО Красивый Петербург</p>
+            </div>
+            <div class="footer-child__address" itemscope="" itemtype="http://schema.org/Organization">
+                <meta itemprop="name" content="ООО Красивый Петербург">
+                <p><a href="tel:78126421635" class="footer-child__address-phone" itemprop="telephone">+7 (812) 642-16-35</a></p>
+                <p><a href="tel:78129241635" class="footer-child__address-phone"><i>Контроль качества:</i> +7 (812) 924-16-35</a></p>
+                <p>Санкт-Петербург, улица Шпалерная, дом.26, лит.А</p>
+                <p>6421635@rsk-piter.ru</p>
+            </div>
+            <div class="footer-child__menu">
+                <ul>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Услуги</a></li>
+                    <li><a href="">Наши работы</a></li>
+                    <li><a href="">Цены</a></li>
+                    <li><a href="">Отзывы</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li><a href="">Вакансии</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="link_topform">
+            <a target="_blank" href="https://topform.ru/">Разработано в ЛЕХА КРАСНОУФИМСК ©</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+
+<script>
+    $(document).ready(function() {
+    });
+
+
+    function openPopUp() {
+        $("#popupDiv").attr("visibility", "visible");
+    }
+</script>
