@@ -23,5 +23,9 @@ namespace Millenium.Controllers
         {
             return View();
         }
+        public IActionResult Objects()
+        {
+            return View();
+        }
     }
 }
