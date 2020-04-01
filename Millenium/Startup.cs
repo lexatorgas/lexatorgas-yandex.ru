@@ -1,10 +1,7 @@
-using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
-using System.IO;
 
 namespace Millenium
 {
@@ -13,9 +10,7 @@ namespace Millenium
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services
-                .AddControllersWithViews()
-                .AddRazorRuntimeCompilation();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -24,7 +19,7 @@ namespace Millenium
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseRouting();
 

@@ -8,6 +8,7 @@
       "destination": "wwwroot/lib/bootstrap/"
     },
     {
+      "provider": "unpkg",
       "library": "jquery@3.4.1",
       "files": [
         "jquery.min.js",

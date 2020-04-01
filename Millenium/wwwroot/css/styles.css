@@ -722,10 +722,6 @@ header {
     border-radius: 0
 }
 
-    .feedback-modal .feedback-man, .feedback-modal .feedback-label {
-        display: none
-    }
-
 .feedback-modal__close {
     float: right;
     color: #fff;
@@ -749,17 +745,15 @@ header {
     right: 0;
     width: 405px;
     height: 287px;
-    background: url(/img/feedback-car.png) center top no-repeat;
+    background: url(/img/feedback-bg.png) center top no-repeat;
     z-index: 0
 }
 
 @media (max-width:1110px) {
     .feedback-man {
-        display: none
     }
 
     .feedback-car {
-        display: none
     }
 }
 
@@ -1636,6 +1630,10 @@ footer {
     color: #000;
     font-weight: 700;
     margin-bottom: 15px
+}
+
+.js-open-menu-other {
+
 }
 
 .vacancy_info_text {
