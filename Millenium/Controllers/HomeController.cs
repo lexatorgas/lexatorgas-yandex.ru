@@ -27,5 +27,10 @@ namespace Millenium.Controllers
         {
             return View();
         }
+
+        public IActionResult Price()
+        {
+            return View();
+        }
     }
 }

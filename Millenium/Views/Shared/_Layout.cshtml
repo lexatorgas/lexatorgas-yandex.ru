@@ -73,9 +73,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="">
-                                        Цены
-                                    </a>
+                                    @Html.ActionLink("Цены", "Price", "Home")
                                 </li>
                                 <li>
                                     @Html.ActionLink("Контакты", "Contacts", "Home")
@@ -192,5 +190,17 @@
                 });
             }
         });
+        $('body').on('click', '.spoiler__title',
+            function () {
+                $(this).parent().find('.spoiler__arrow').toggleClass('spoiler__down');
+                var body = $(this).parent().find('.spoiler__block');
+                var title = $(this).prev(); body.slideDown();
+                if (body.hasClass("spoiler__block_show")) {
+                    body.slideUp();
+                } else {
+                    body.slideDown();
+                }
+                title.toggleClass('spoiler__title_show'); body.toggleClass('spoiler__block_show');
+            });
     });
 </script>
