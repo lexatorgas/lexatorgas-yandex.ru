@@ -333,7 +333,6 @@ header {
     position: relative;
     width: 100%;
     height: 363px;
-    margin-bottom: 50px
 }
 
 .wrapper-inner-top {
@@ -383,8 +382,7 @@ header {
 }
 
     .inner-top__flex > div {
-        height: 363px;
-        width: 50%
+        width: 100%
     }
 
 .inner-top__title {
@@ -601,7 +599,7 @@ header {
 }
 
 .feedback {
-    background: #abd47d url('/img/feedback-bg.png') top left no-repeat;
+    background: #abd47d url('/img/feedback-bg.jpg') top left no-repeat;
     border-radius: 50px 50px 0 0;
     padding: 50px 60px;
     margin: 40px 0;
@@ -735,7 +733,7 @@ header {
     right: 90px;
     width: 298px;
     height: 432px;
-    background: url('/img/feedback-bg.png') center top no-repeat;
+    background: url('/img/feedback-bg.jpg') center top no-repeat;
     z-index: 0
 }
 
@@ -745,7 +743,7 @@ header {
     right: 0;
     width: 405px;
     height: 287px;
-    background: url(/img/feedback-bg.png) center top no-repeat;
+    background: url(/img/feedback-bg.jpg) center top no-repeat;
     z-index: 0
 }
 
@@ -840,7 +838,8 @@ footer {
 
 .footer-child__address-phone {
     font-size: 24px;
-    font-weight: 500
+    font-weight: 500;
+    color: #abd47d;
 }
 
     .footer-child__address-phone i {
@@ -1591,7 +1590,12 @@ footer {
 }
 
 .link_topform {
-    margin-top: 15px
+    margin-top: 15px;
+    color: #abd47d;
+}
+
+.green_color {
+    color: #abd47d;
 }
 
 .vacancy_item {

@@ -26,9 +26,11 @@
         </div>
 
         <div>
-            <div class="service-image"><a href="/"><img src="/img/icon-main-5_5b7fde_5b9671.png"></a></div>
+            <div class="service-image"><a asp-controller="Services"
+                                          asp-action="RemontPodezda"><img src="/img/icon-main-5_5b7fde_5b9671.png"></a></div>
 
-            <a href="/" class="service-title"><span>Косметический</span> <span>ремонт</span> <span>парадных</span></a>
+            <a asp-controller="Services"
+               asp-action="RemontPodezda" class="service-title"><span>Косметический</span> <span>ремонт</span> <span>парадных</span></a>
 
             <ul class="service-category">
                 <li><a href="/"><span>Замена</span> <span>радиаторов</span> <span>отопления</span></a></li>
@@ -39,9 +41,11 @@
             </ul>
         </div>
         <div>
-            <div class="service-image"><a href=""><img src="/img/icon-main-6_5b7fde.png"></a></div>
+            <div class="service-image"><a asp-controller="Services"
+                                          asp-action="ZamenaOkonIDverey"><img src="/img/icon-main-6_5b7fde.png"></a></div>
 
-            <a href="/" class="service-title"><span>Замена</span> <span>окон</span> <span>и</span> <span>дверей</span></a>
+            <a asp-controller="Services"
+               asp-action="ZamenaOkonIDverey" class="service-title"><span>Замена</span> <span>окон</span> <span>и</span> <span>дверей</span></a>
 
             <ul class="service-category">
                 <li><a href="/"><span>Решетчатые</span> <span>двери</span></a></li>
@@ -52,9 +56,11 @@
             </ul>
         </div>
         <div>
-            <div class="service-image"><a href="/"><img src="/img/icon-main-7_5b7fde.png"></a></div>
+            <div class="service-image"><a asp-controller="Services"
+                                          asp-action="Asfaltirovanie"><img src="/img/icon-main-7_5b7fde.png"></a></div>
 
-            <a href="/" class="service-title"><span>Асфальтирование</span></a>
+            <a asp-controller="Services"
+               asp-action="Asfaltirovanie" class="service-title"><span>Асфальтирование</span></a>
 
             <ul class="service-category">
                 <li><a href="/"><span>Строительство</span> <span>парковок</span></a></li>
@@ -65,9 +71,11 @@
             </ul>
         </div>
         <div>
-            <div class="service-image"><a href="/"><img src="/img/icon-main-4_5b7fde.png"></a></div>
+            <div class="service-image"><a asp-controller="Services"
+                                          asp-action="RemontFasadov"><img src="/img/icon-main-4_5b7fde.png"></a></div>
 
-            <a href="/" class="service-title"><span>Ремонт</span> <span>фасадов</span></a>
+            <a asp-controller="Services"
+               asp-action="RemontFasadov" class="service-title"><span>Ремонт</span> <span>фасадов</span></a>
 
             <ul class="service-category">
                 <li><a href="/"><span>Отделка</span> <span>цоколя</span></a></li>
@@ -78,9 +86,11 @@
             </ul>
         </div>
         <div>
-            <div class="service-image"><a href="/"><img src="/img/icon-main-1_5b7fde.png"></a></div>
+            <div class="service-image"><a asp-controller="Services"
+                                          asp-action="KrovelnieRaboti"><img src="/img/icon-main-1_5b7fde.png"></a></div>
 
-            <a href="/" class="service-title"><span>Кровельные</span> <span>работы</span></a>
+            <a asp-controller="Services"
+               asp-action="KrovelnieRaboti" class="service-title"><span>Кровельные</span> <span>работы</span></a>
 
             <ul class="service-category">
                 <li><a href="/"><span>Монтаж</span> <span>фальцевой</span> <span>кровли</span></a></li>
@@ -91,9 +101,11 @@
             </ul>
         </div>
         <div>
-            <div class="service-image"><a href="/"><img src="/img/icon-main-2_5b7fde.png"></a></div>
+            <div class="service-image"><a asp-controller="Services"
+                                          asp-action="Blagoustroistvo"><img src="/img/icon-main-2_5b7fde.png"></a></div>
 
-            <a href="/" class="service-title"><span>Благоустройство</span> <span>придомовой</span> <span>территории</span></a>
+            <a asp-controller="Services"
+               asp-action="Blagoustroistvo" class="service-title"><span>Благоустройство</span> <span>придомовой</span> <span>территории</span></a>
 
             <ul class="service-category">
                 <li><a href="/"><span>Установка</span> <span>малых</span> <span>архитектурных</span> <span>форм</span></a></li>
@@ -180,33 +192,5 @@
         <li style="background-image: url(/img/proizvedite-okonchatelnyjj-raschet-posle-zavershenija-vsekh-rabot-i-podpisanija-akta_5b7ff0.png);">Произведите окончательный расчет после завершения всех работ и подписания Акта</li>
         <li style="background-image: url(/img/naslazhdajjtes-remontom-vashejj-mechty_5b7ff0.png);">Наслаждайтесь РЕМОНТОМ Вашей мечты!</li>
     </ul>
-</div>
-
-<div class="wrapper" tabindex="-1" role="dialog" id="feedback-modal">
-    <div class="modal-content">
-        <div class="feedback feedback-modal">
-            <form id="call_form_2" action="#" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="areaform" value="44"/>
-                <input type="hidden" name="goal" value="ORDER"/>
-                <input type="hidden" name="ajreq" value="1"/>
-                <input type="hidden" name="send" value="1"/>
-
-                <span class="feedback-title">Возникли вопросы?</span>
-                <span class="feedback-text">Просто оставьте свои контакты,и мы свяжемся с вами!</span>
-
-                <input id="field_110_area_44" type="tel" name="field_110_area_44" value="" placeholder="*Ваш номер телефона:" />
-                <input id="field_109_area_44" type="text" name="field_109_area_44" value="" placeholder="Ваше имя:" />
-
-                <div class="clearfix"></div>
-
-                <button id="call-captcha" type="submit" class="button feedback-submit" onclick="yaCounter50710909.reachGoal('ORDER');">Отправить</button>
-
-                <div class="feedback-label">
-                    <span>Бесплатно расчитаем смету!</span>
-                    <span>Ответим на все ваши вопросы!</span>
-                </div>
-            </form>
-        </div>
-    </div>
 </div>
 </body>
