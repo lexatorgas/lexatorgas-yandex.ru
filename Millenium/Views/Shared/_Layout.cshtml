@@ -4,216 +4,218 @@
 <script src="/lib/jquery/jquery.js"></script>
 <html>
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <link rel="shortcut icon" href="#" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
-<div class="wrapper">
-    <header>
-        <div class="header-block__top--flex">
-            <meta itemprop="name" content="ООО «РСК Миллениум»">
-            <div class="header-block__top-time">
-                <text>пн-пт с 8: 00 до 19:00</text>
-            </div>
-            <div class="header-block__top-address">
-                <text>Екатеринбург, улица Белинского, дом.118</text>
-            </div>
-            <div style="width: 600px">
-                <span class="header-block__top-phone--span">
-                    <text class="header-block__top-phone">+7 (909) 702-86-00</text><br>
-                </span>
-                <text class="header-block__top-phone">+7 (982) 661-47-74</text>
-                <text class="header-block__top-email">rsk.millenium@gmail.com</text>
-                <text class="button header-block__top-feedback header-feedback">Оставить заявку</text>
-                <text class="header-block__top-menu">Меню</text>
-            </div>
-        </div>
-        <div class="header-block__bottom">
-            <a href="/" class="header-logo"></a>
-            <div class="header-block">
-                <div class="header-block__info">
-                    <div class="info_item">
-                        <div class="img"><img src="/img/i_1.png"></div>
-                        <div class="info_data">
-                            <div>бесплатный</div>
-                            <div>выезд мастера</div>
-                        </div>
-                    </div>
-                    <div class="info_item">
-                        <div class="img"><img src="/img/i_2.png"></div>
-                        <div class="info_data">
-                            <div>бесплатная</div>
-                            <div>смета на следующий день</div>
-                        </div>
-                    </div>
-                    <div class="info_item">
-                        <div class="img"><img src="/img/i_3.png"></div>
-                        <div class="info_data">
-                            <div>бесплатная</div>
-                            <div>рассрочка</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-block__menu">
-                    <div class="header-block__menu--flex">
-                        <div>
-                            <ul class="header-menu" id="header-menu">
-                                <li>
-                                    @Html.ActionLink("О компании", "About", "Home")
-                                </li>
-                                <li>
-                                    <a href="" class="js-open-menu-other" data-id="4043">
-                                        Услуги
-                                        <i class="header-menu__chevron"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Наши работы", "Objects", "Home", new { @class = "green_color" })
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Цены", "Price", "Home")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Контакты", "Contacts", "Home")
-                                </li>
-                                <li>
-                                    @Html.ActionLink("Вакансии", "Vacancies", "Home")
-                                </li>
-                            </ul>
-
-                        </div>
-                        <div>
-                            <span class="button header-feedback" onclick="">Оставить заявку</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-</div>
-<div class="header-menu-other__block">
-    <ul class="header-menu-other" style="display: none;" id="menu-4043">
-        <li>
-            <a asp-controller="Services"
-               asp-action="RemontPodezda">
-                <img src="/img/icon-main-5_5b7fde_5b9671.png">
-                <br>
-                Косметический ремонт подьездов
-            </a>
-        </li>
-        <li>
-            <a asp-controller="Services"
-               asp-action="ZamenaOkonIDverey">
-                <img src="/img/icon-main-6_5b7fde.png">
-                <br>
-                Замена окон и дверей
-            </a>
-        </li>
-        <li>
-            <a asp-controller="Services"
-               asp-action="Asfaltirovanie">
-                <img src="/img/icon-main-7_5b7fde.png">
-                <br>
-                Асфальтирование
-            </a>
-        </li>
-        <li>
-            <a asp-controller="Services"
-               asp-action="RemontFasadov">
-                <img src="/img/icon-main-4_5b7fde.png">
-                <br>
-                Ремонт фасадов
-            </a>
-        </li>
-        <li>
-            <a asp-controller="Services"
-               asp-action="KrovelnieRaboti">
-                <img src="/img/icon-main-1_5b7fde.png">
-                <br>
-                Кровельные работы
-            </a>
-        </li>
-        <li>
-            <a asp-controller="Services"
-               asp-action="Blagoustroistvo">
-                <img src="/img/icon-main-2_5b7fde.png">
-                <br>
-                Благоустройство придомовой территории
-            </a>
-        </li>
-    </ul>
-</div>
-<div class="img wrapper"><img style="height: 200px; width: 1500px; margin-left: -200px; margin-top: 30px" src="/img/header-img.jpg"></div>
-<div>
-    @RenderBody()
-</div>
-<footer>
-    <div class="wrapper footer" tabindex="-1" role="dialog" id="feedback-modal">
-        <div class="modal-content">
-            <div class="feedback feedback-modal">
-                <form id="call_form_2" action="#" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="areaform" value="44"/>
-                    <input type="hidden" name="goal" value="ORDER"/>
-                    <input type="hidden" name="ajreq" value="1"/>
-                    <input type="hidden" name="send" value="1"/>
-
-                    <span class="feedback-title">Возникли вопросы?</span>
-                    <span class="feedback-text">Просто оставьте свои контакты,и мы свяжемся с вами!</span>
-
-                    <input id="field_110_area_44" type="tel" name="field_110_area_44" value="" placeholder="*Ваш номер телефона:"/>
-                    <input id="field_109_area_44" type="text" name="field_109_area_44" value="" placeholder="Ваше имя:"/>
-
-                    <div class="clearfix"></div>
-
-                    <button id="call-captcha" type="submit" class="button feedback-submit" onclick="yaCounter50710909.reachGoal('ORDER');">Отправить</button>
-
-                    <div class="feedback-label">
-                        <span>Бесплатно расчитаем смету!</span>
-                        <span>Ответим на все ваши вопросы!</span>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
     <div class="wrapper">
-        <div class="footer">
-            <div class="footer-child__copyright">
-                <p>© 2013-2020</p>
-                <p>Ремонтно-строительная компания<br>ООО «РСК Миллениум»</p>
+        <header>
+            <div class="header-block__top--flex">
+                <meta itemprop="name" content="ООО «РСК Миллениум»">
+                <div class="header-block__top-time">
+                    <text>пн-пт с 8: 00 до 19:00</text>
+                </div>
+                <div class="header-block__top-address">
+                    <text>Екатеринбург, улица Белинского, дом.118</text>
+                </div>
+                <div style="width: 600px">
+                    <span class="header-block__top-phone--span">
+                        <text class="header-block__top-phone">+7 (909) 702-86-00</text><br>
+                    </span>
+                    <text class="header-block__top-phone">+7 (982) 661-47-74</text>
+                    <text class="header-block__top-email">rsk.millenium@gmail.com</text>
+                    <text class="button header-block__top-feedback header-feedback">Оставить заявку</text>
+                    <text class="header-block__top-menu">Меню</text>
+                </div>
             </div>
-            <div class="footer-child__address" itemscope="" itemtype="http://schema.org/Organization">
-                <meta itemprop="name" content="ООО Миллениум">
-                <p>+7 (909) 702-86-00</p>
-                <p><a href="tel:79826614774" class="footer-child__address-phone"><i>Контроль качества:</i> +7 (982) 661-47-74</a></p>
-                <p>Екатеринбург, улица Белинского, дом.118</p>
-                <p>rsk.millenium@gmail.com</p>
-            </div>
-            <div class="footer-child__menu">
-                <ul>
-                    <li>@Html.ActionLink("О компании", "About", "Home", null, new {@class = "green_color"})</li>
-                    <li><a class="green_color" href="">Услуги</a></li>
-                    <li>@Html.ActionLink("Наши работы", "Objects", "Home", null, new {@class = "green_color"})</li>
-                    <li>@Html.ActionLink("Цены", "Price", "Home", null, new {@class = "green_color"})</li>
-                    <li>@Html.ActionLink("Контакты", "Contacts", "Home", null, new {@class = "green_color"})</li>
-                    <li>@Html.ActionLink("Вакансии", "Vacancies", "Home", null, new {@class = "green_color"})</li>
-                </ul>
+            <div class="header-block__bottom">
+                <a href="/" class="header-logo"></a>
+                <div class="header-block">
+                    <div class="header-block__info">
+                        <div class="info_item">
+                            <div class="img"><img src="/img/i_1.png"></div>
+                            <div class="info_data">
+                                <div>бесплатный</div>
+                                <div>выезд мастера</div>
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <div class="img"><img src="/img/i_2.png"></div>
+                            <div class="info_data">
+                                <div>бесплатная</div>
+                                <div>смета на следующий день</div>
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <div class="img"><img src="/img/i_3.png"></div>
+                            <div class="info_data">
+                                <div>бесплатная</div>
+                                <div>рассрочка</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-block__menu">
+                        <div class="header-block__menu--flex">
+                            <div>
+                                <ul class="header-menu" id="header-menu">
+                                    <li>
+                                        @Html.ActionLink("О компании", "About", "Home")
+                                    </li>
+                                    <li>
+                                        <a href="" class="js-open-menu-other" data-id="4043">
+                                            Услуги
+                                            <i class="header-menu__chevron"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Наши работы", "Objects", "Home", new { @class = "green_color" })
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Цены", "Price", "Home")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Контакты", "Contacts", "Home")
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Вакансии", "Vacancies", "Home")
+                                    </li>
+                                </ul>
 
+                            </div>
+                            <div onclick="ScrollDown">
+                                <span class="button header-feedback js-open-feedback">Оставить заявку</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="header-menu-other__block">
+        <ul class="header-menu-other" style="display: none;" id="menu-4043">
+            <li>
+                <a asp-controller="Services"
+                   asp-action="RemontPodezda">
+                    <img src="/img/icon-main-5_5b7fde_5b9671.png">
+                    <br>
+                    Косметический ремонт подьездов
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Services"
+                   asp-action="ZamenaOkonIDverey">
+                    <img src="/img/icon-main-6_5b7fde.png">
+                    <br>
+                    Замена окон и дверей
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Services"
+                   asp-action="Asfaltirovanie">
+                    <img src="/img/icon-main-7_5b7fde.png">
+                    <br>
+                    Асфальтирование
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Services"
+                   asp-action="RemontFasadov">
+                    <img src="/img/icon-main-4_5b7fde.png">
+                    <br>
+                    Ремонт фасадов
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Services"
+                   asp-action="KrovelnieRaboti">
+                    <img src="/img/icon-main-1_5b7fde.png">
+                    <br>
+                    Кровельные работы
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Services"
+                   asp-action="Blagoustroistvo">
+                    <img src="/img/icon-main-2_5b7fde.png">
+                    <br>
+                    Благоустройство придомовой территории
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="img wrapper"><img style="height: 250px; width: 1500px; margin-left: -200px; margin-top: 30px" src="/img/header-img.jpg"></div>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="wrapper footer" tabindex="-1" role="dialog" id="feedback-modal">
+            <div class="modal-content">
+                <div class="feedback feedback-modal">
+                    <form id="call_form_2" action="#" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="areaform" value="44" />
+                        <input type="hidden" name="goal" value="ORDER" />
+                        <input type="hidden" name="ajreq" value="1" />
+                        <input type="hidden" name="send" value="1" />
+
+                        <span class="feedback-title">Возникли вопросы?</span>
+                        <span class="feedback-text">Просто оставьте свои контакты,и мы свяжемся с вами!</span>
+
+                        <input id="field_110_area_44" type="tel" name="field_110_area_44" value="" placeholder="*Ваш номер телефона:" />
+                        <input id="field_109_area_44" type="text" name="field_109_area_44" value="" placeholder="Ваше имя:" />
+
+                        <div class="clearfix"></div>
+
+                        <button id="call-captcha" type="submit" class="button feedback-submit" onclick="yaCounter50710909.reachGoal('ORDER');">Отправить</button>
+
+                        <div class="feedback-label">
+                            <span>Бесплатно расчитаем смету!</span>
+                            <span>Ответим на все ваши вопросы!</span>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="link_topform">
-            <a class="green_color" >Developed by Egorushkin Alexey</a>
+        <div class="wrapper">
+            <div class="footer">
+                <div class="footer-child__copyright">
+                    <p>© 2013-2020</p>
+                    <p>Ремонтно-строительная компания<br>ООО «РСК Миллениум»</p>
+                </div>
+                <div class="footer-child__address" itemscope="" itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" content="ООО Миллениум">
+                    <p>+7 (909) 702-86-00</p>
+                    <p><a href="tel:79826614774" class="footer-child__address-phone"><i>Контроль качества:</i> +7 (982) 661-47-74</a></p>
+                    <p>Екатеринбург, улица Белинского, дом.118</p>
+                    <p>rsk.millenium@gmail.com</p>
+                </div>
+                <div class="footer-child__menu">
+                    <ul>
+                        <li>@Html.ActionLink("О компании", "About", "Home", null, new {@class = "green_color"})</li>
+                        <li><a class="green_color" href="">Услуги</a></li>
+                        <li>@Html.ActionLink("Наши работы", "Objects", "Home", null, new {@class = "green_color"})</li>
+                        <li>@Html.ActionLink("Цены", "Price", "Home", null, new {@class = "green_color"})</li>
+                        <li>@Html.ActionLink("Контакты", "Contacts", "Home", null, new {@class = "green_color"})</li>
+                        <li>@Html.ActionLink("Вакансии", "Vacancies", "Home", null, new {@class = "green_color"})</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="link_topform">
+                <a class="green_color">Developed by Egorushkin Alexey</a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
 
 <script>
     $(document).ready(function () {
-        $('.js-open-menu-other').click(function() {
+        $('.js-open-menu-other').click(function () {
             if ($(window).width() > 480) {
                 event.preventDefault();
-                var id = $(this).data('id'); $('#menu-' + id).slideToggle('medium', function() {
+                var id = $(this).data('id'); $('#menu-' + id).slideToggle('medium', function () {
                     if ($(this).is(':visible')) {
                         $(this).css('display', 'flex');
                     }
@@ -232,5 +234,8 @@
                 }
                 title.toggleClass('spoiler__title_show'); body.toggleClass('spoiler__block_show');
             });
+        $('.js-open-feedback').click(function() {
+            $('html,body').animate({ scrollTop: document.body.scrollHeight }, "fast");
+        });
     });
 </script>
