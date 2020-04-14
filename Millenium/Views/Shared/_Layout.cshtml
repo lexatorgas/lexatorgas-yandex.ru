@@ -5,6 +5,8 @@
 <html>
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <meta name="google-site-verification" content="7lvlIcWrwM0a9g191SQTT0aemsKwypfWFH0H-pBbSu0" />
+    <meta name="yandex-verification" content="0f2b20eb438bc2e5" />
     <link rel="shortcut icon" href="#" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
@@ -100,7 +102,7 @@
                    asp-action="RemontPodezda">
                     <img src="/img/icon-main-5_5b7fde_5b9671.png">
                     <br>
-                    Косметический ремонт подьездов
+                    Косметический ремонт входной группы
                 </a>
             </li>
             <li>
@@ -153,7 +155,7 @@
         <div class="wrapper footer" tabindex="-1" role="dialog" id="feedback-modal">
             <div class="modal-content">
                 <div class="feedback feedback-modal">
-                    <form id="call_form_2" action="#" method="post" enctype="multipart/form-data">
+                    <form asp-controller="Home" asp-action="SendEmail" method="post">
                         <input type="hidden" name="areaform" value="44" />
                         <input type="hidden" name="goal" value="ORDER" />
                         <input type="hidden" name="ajreq" value="1" />
@@ -162,12 +164,12 @@
                         <span class="feedback-title">Возникли вопросы?</span>
                         <span class="feedback-text">Просто оставьте свои контакты,и мы свяжемся с вами!</span>
 
-                        <input id="field_110_area_44" type="tel" name="field_110_area_44" value="" placeholder="*Ваш номер телефона:" />
-                        <input id="field_109_area_44" type="text" name="field_109_area_44" value="" placeholder="Ваше имя:" />
+                        <input type="tel" name="phoneNumber" value="" placeholder="*Ваш номер телефона:" />
+                        <input type="text" name="name" value="" placeholder="Ваше имя:" />
 
                         <div class="clearfix"></div>
 
-                        <button id="call-captcha" type="submit" class="button feedback-submit" onclick="yaCounter50710909.reachGoal('ORDER');">Отправить</button>
+                        <button id="call-captcha" type="submit" class="button feedback-submit">Отправить</button>
 
                         <div class="feedback-label">
                             <span>Бесплатно расчитаем смету!</span>
