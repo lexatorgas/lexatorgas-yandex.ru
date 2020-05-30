@@ -41,6 +41,7 @@ h3, .h3 {
 }
 
 .wrapper {
+    max-width: 1176px;
     margin: 0 auto;
     padding: 0 20px
 }
@@ -462,22 +463,6 @@ header {
         padding: 10px 0
     }
 
-.why {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-bottom: 50px
-}
-
-    .why > div:first-child {
-        flex-grow: 0;
-        width: 378px;
-        margin-right: 40px
-    }
-
-    .why > div:last-child {
-        flex-grow: 1
-    }
-
 .why-list {
     list-style: none;
     padding: 0;
@@ -516,97 +501,12 @@ header {
     float: left
 }
 
-.wrapper-btn {
-    color: #abd47d;
-    border: 1px solid #abd47d;
-    float: right
-}
-
-.reviews {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-top: 25px;
-    margin-bottom: 50px
-}
-
-.reviews-item {
-    width: 33%;
-    background-color: #fff;
-    padding: 50px 40px
-}
-
-    .reviews-item:nth-child(even) {
-        margin: 0 35px
-    }
-
-.reviews-text {
-    border-bottom: 1px solid #dee5ed;
-    padding-bottom: 20px
-}
-
-.reviews-autor {
-    padding-top: 20px
-}
-
-    .reviews-autor img {
-        float: left;
-        border-radius: 50px;
-        margin-right: 15px
-    }
-
-    .reviews-autor strong {
-        display: block;
-        margin-top: 10px
-    }
-
-.reviews-more-mobile {
-    display: none
-}
-
-.reviews-index {
-    margin-top: 60px;
-    margin-bottom: 60px
-}
-
-    .reviews-index .reviews-item {
-        background-color: #f1faea
-    }
-
-.reviews-inner {
-    flex-wrap: wrap;
-    justify-content: space-between
-}
-
-    .reviews-inner .reviews-item:nth-child(even) {
-        margin: 0 0 30px
-    }
-
-    .reviews-inner .reviews-item {
-        width: 31%;
-        background-color: #f1faea;
-        margin: 0 0 30px
-    }
-
-.reviews-hr {
-    border: 0;
-    border-bottom: 1px solid #abd47d
-}
-
-.bx-reviews {
-    display: block;
-    margin-bottom: 30px
-}
-
 .feedback {
     background: #abd47d url('/img/feedback-bg.jpg') top left no-repeat;
     border-radius: 50px 50px 0 0;
     padding: 50px 60px;
     margin: 40px 0;
     position: relative
-}
-
-.feedback--spec {
-    padding: 30px 60px
 }
 
 .feedback input {
@@ -645,10 +545,6 @@ header {
     display: block
 }
 
-.feedback--spec .feedback-text {
-    max-width: 75%
-}
-
 .feedback-submit {
     background-color: #fff;
     color: #abd47d;
@@ -659,21 +555,6 @@ header {
     .feedback-submit:focus {
         outline: none
     }
-
-.feedback-iagree {
-    display: inline-block;
-    max-width: 50%
-}
-
-    .feedback-iagree a {
-        font-size: 12px;
-        color: #000;
-        text-decoration: underline
-    }
-
-        .feedback-iagree a:hover {
-            text-decoration: none
-        }
 
 .feedback-label {
     position: absolute;
@@ -717,41 +598,6 @@ header {
 .feedback-modal {
     margin: 0 !important;
     border-radius: 0
-}
-
-.feedback-modal__close {
-    float: right;
-    color: #fff;
-    font-size: 30px;
-    cursor: pointer
-}
-
-.feedback-man {
-    position: absolute;
-    bottom: 0;
-    right: 90px;
-    width: 298px;
-    height: 432px;
-    background: url('/img/feedback-bg.jpg') center top no-repeat;
-    z-index: 0
-}
-
-.feedback-car {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 405px;
-    height: 287px;
-    background: url(/img/feedback-bg.jpg) center top no-repeat;
-    z-index: 0
-}
-
-@media (max-width:1110px) {
-    .feedback-man {
-    }
-
-    .feedback-car {
-    }
 }
 
 .service {
