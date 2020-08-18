@@ -13,5 +13,10 @@ namespace Millenium.Controllers
         {
             return View();
         }
+
+        public IActionResult Irbit()
+        {
+            return View();
+        }
     }
 }
