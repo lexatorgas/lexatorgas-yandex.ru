@@ -84,7 +84,7 @@ header {
     display: block;
     width: 250px;
     min-width: 200px;
-    background: url('/img/logo-inner.jpg') center center no-repeat;
+    background: url('/img/newLogo.png') center center no-repeat;
     margin-right: 70px;
     flex-grow: 0;
     background-size: contain;
